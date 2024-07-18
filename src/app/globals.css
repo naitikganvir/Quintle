@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.service-name {
+  @apply text-rose-600 uppercase block font-semibold text-sm tracking-widest;
+}
+
+.title {
+  @apply capitalize text-2xl sm:text-3xl font-semibold my-3;
+}
+
+.rotate {
+  transform: rotateX(180deg);
+}
+
+.team-card:hover :is(h2, p) {
+  color: #c20a47;
+}
+
+.team-card:hover .icons {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+input::placeholder {
+  color: #ff0073;
+}
+
+@keyframes playPluse {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(-50%);
+    opacity: 1;
+    width: 4rem;
+    height: 4rem;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(-50%);
+    opacity: 0;
+    width: 9rem;
+    height: 9rem;
+  }
+}
+
+.playButton {
+  animation: playPluse 1.5s ease-out infinite;
+}
+
+.scrollbar::-webkit-scrollbar {
+  height: 0;
+}
+
+.big-text {
+  font-size: 30px; /* Adjust the size as needed */
+  font-weight: bold; /* Optional: Make the text bold */
+  text-align: center; /* Optional: Center align the text */
+  margin: 20px; /* Optional: Add some margin */
+}
